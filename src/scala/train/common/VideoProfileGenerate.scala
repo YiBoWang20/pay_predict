@@ -33,7 +33,7 @@ object VideoProfileGenerate {
 
 
     //4 Save Data
-    saveVideoProfile(now,df_video_profile,"predict")
+    saveVideoProfile(now,df_video_profile,"train")
     printDf("输出 df_video_profile",df_video_profile)
     println("VideoProfileGenerate  over~~~~~~~~~~~")
 

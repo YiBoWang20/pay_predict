@@ -3018,4 +3018,21 @@ object GetSaveData {
 
   }
 
+
+  def saveVideoProfile(now:String,df_video_profile:DataFrame,state:String): Unit ={
+    val videoProfilePath = hdfsPath + "data/" + state + "/common/processed/videoprofile" + now.split(" ")(0)
+    saveProcessedData(df_video_profile, videoProfilePath)
+
+  }
+
+  def getVideoProfile(sparkSession: SparkSession, now: String, state: String)={
+    val videoProfilePath = hdfsPath + "data/" + state + "/common/processed/videoprofile" + now.split(" ")(0)
+    getData(sparkSession, videoProfilePath)
+  }
+
+
+
+
+
+
 }
